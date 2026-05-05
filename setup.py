@@ -83,7 +83,7 @@ class Download(Command):
         else:
             archive_name = self.url.rsplit("/", 1)[-1]
 
-            mkpath(self.download_dir, verbose=self.verbose, dry_run=self.dry_run)
+            mkpath(self.download_dir, verbose=self.verbose)
 
             log.info("downloading {}".format(self.url))
             if not self.dry_run:
