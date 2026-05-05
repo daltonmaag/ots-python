@@ -252,6 +252,11 @@ setup(
     zip_safe=False,
     cmdclass=cmdclass,
     setup_requires=["setuptools_scm"],
+    entry_points={
+        "console_scripts": [
+            "opentype-sanitizer = ots.__main__:main",
+        ]
+    },
     extras_require={"testing": ["pytest"]},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
